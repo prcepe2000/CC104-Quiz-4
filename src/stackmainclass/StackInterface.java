@@ -10,15 +10,15 @@ package stackmainclass;
  * @author username
  * @param <E>
  */
-public interface StackInterface<E> {
+public interface StackInterface<String> {
     
     int size();
     boolean isEmpty();
-    void push(E e);
-    E top();
-    E pop();
+    void push(String e);
+    String top();
+    String pop();
 
-    public String pop(String nextLine);
+    public void push();
     
     
     

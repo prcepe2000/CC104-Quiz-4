@@ -21,7 +21,7 @@ public class StackMainClass {
         
         Scanner s = new Scanner(System.in);
         
-        StackInterface<String> S = new Stack<>( );
+        StackInterface<String> Slist = new Stack<>( );
 //        S.push(5); // contents: (5)
 //        S.push(3); // contents: (5, 3)
 //        System.out.println(S.size( )); // contents: (5, 3) outputs 2
@@ -40,11 +40,22 @@ public class StackMainClass {
 //        S.push(8); // contents: (7, 9, 6, 8)
 //        System.out.println(S.pop( ));
           
-          System.out.println("Input Sentence: ");
-          S.push(s.nextLine());
-          System.out.println("Undo? (Y/N) \n");
-          s.nextLine();
-          System.out.println("New Sentence: " + S.pop());    
+//          System.out.println("Input Sentence: ");
+//          S.push(s.nextLine());
+//          System.out.println("Undo? (Y/N) \n");
+//          s.nextLine();
+//          System.out.println("New Sentence: " + S.pop());
+
+        System.out.println("Input Sentence: " + Slist);
+        Slist.push();
+        System.out.println("Undo? (Y/N)");
+        if (s.next().startsWith("Y")) {
+            Slist.pop();
+            System.out.println("New Sentence: " + Slist.pop());
+        } 
+        else {
+            return;
+        }
     }
     
 }
